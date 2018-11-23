@@ -1,0 +1,188 @@
+html{height:100%}
+body{
+	min-height:100%;
+	text-align:center; /*水平居中*/
+	line-height: 20px; /*行距设为与div高度一致*/
+
+}
+body{
+	background-color: black;
+	
+	min-height: 80%;
+	width: 95%;
+	margin:0; padding:0;
+	
+	
+	color: #ffffff;
+}
+#level1{
+	font-size: 25px;
+	margin-top: 15%;
+	display:inline-block;
+	/*transition: all 5.5s ease;*/
+	animation: Glow 1.5s ease infinite alternate;
+
+ 
+}
+#level2{
+	font-size: 25px;
+	margin-top: 15%;
+    animation: textColor 4s linear infinite;
+}
+/*==字体发光==*/
+/*#level1{
+text-shadow: 0 0 10px #fff,
+                     0 0 20px #fff,
+                     0 0 30px #fff,
+                     0 0 40px #00a67c,
+                     0 0 70px #00a67c,
+                     0 0 80px #00a67c,
+                     0 0 100px #00a67c,
+                     0 0 100px #00a67c;
+
+}*/
+
+
+
+/*定义动画*/
+@keyframes Glow {
+    from {
+        text-shadow: 0 0 10px #fff,
+                     0 0 20px #fff,
+                     0 0 30px #fff,
+                     0 0 40px #ffff00,
+                     0 0 70px #ffff00,
+                     0 0 80px #ffff00,
+                     0 0 100px #ffff00,
+                     0 0 100px #ffff00;
+    }
+    to {
+        text-shadow: 0 0 5px #fff,
+                     0 0 10px #fff,
+                     0 0 15px #fff,
+                     0 0 20px #00a67c,
+                     0 0 35px #00a67c,
+                     0 0 40px #00a67c,
+                     0 0 50px #00a67c,
+                     0 0 75px #00a67c;
+    }
+}
+
+/*定义动画*/
+@keyframes textColor
+{
+0%   {color: #fff;}
+25%  {color: #8F8F8F;}
+50%  {color: #363636;}
+100% {color: #000;}
+}
+
+
+
+
+
+
+
+/*===========================================*/
+#control{
+     position: absolute;
+	 left:25%;
+	 top:25%;
+	 background-color:white;
+     height: 50%;
+    width: 50%;
+}
+#up{
+	
+	 
+	 
+	margin-right: auto;
+   margin-left: auto;
+
+	 width:0;
+    height:0;
+   
+    
+	 border-width:100px; 
+border-style: solid;
+border-color: transparent transparent red transparent;
+
+	
+}
+#left{
+	
+	float:left;
+	
+   margin-left: 5%;
+
+	width:0;
+    height:0;
+   
+    
+	 border-width:100px; 
+border-style: solid;
+border-color: transparent blue transparent transparent;
+	
+}
+#right{
+	
+	
+	
+   margin-left: 75%;
+   
+
+
+	
+	width:0;
+    height:0;
+   
+    
+	 border-width:100px; 
+border-style: solid;
+border-color: transparent transparent transparent green;
+	
+}
+#down{
+	
+	
+	margin-right: auto;
+   margin-left: auto;
+
+	width:0;
+    height:0;
+   
+    
+	 border-width:100px; 
+border-style: solid;
+border-color: red transparent transparent transparent;
+	
+}
+
+
+#button{
+    position: absolute;
+    width: 40px;
+    border: 2px solid;
+    border-color: white;
+    border-radius: 10px;
+    left: 10px;
+    top: 20px;
+}
+#button:hover{
+    background-color: white;
+    color:green;
+}
+#value{
+    position: absolute;
+    width: 40px;
+    color:white;
+    left: 70px;
+    top: 20px;
+}#level{
+    position: absolute;
+    width: 120px;
+    color:white;
+    left: 120px;
+    top: 20px;
+}
+

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>index</title>
+        <style>
+		body{
+		margin:0;
+		padding:0;
+		border:0;
+		/*水平垂直居中*/
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		}
+            #box{
+				border:1px solid #ff0000;
+				background-color:#000000;
+				width:90%;
+				height:90%;
+               /*水平垂直居中*/
+                display:flex;
+				justify-content:center;
+				align-items:center;
+            }
+			#text{
+			 /*鼠标悬浮样式，pointer小手*/
+				cursor:pointer;
+				font-size:25px;
+				color:#ffffff;
+				 animation: shadow_c 1.5s linear infinite alternate;
+				 
+			}
+			
+			@keyframes shadow_c {
+    0% { text-shadow: 0 0 10px #fff,
+                     0 0 20px #fff,
+                     0 0 30px #fff,
+                     0 0 40px #00a67c,
+                     0 0 70px #00a67c,
+                     0 0 80px #00a67c,
+                     0 0 100px #00a67c,
+                     0 0 150px #00a67c;}
+   
+   33.33% {  text-shadow: 0 0 5px #fff,
+                     0 0 10px #fff,
+                     0 0 15px #fff,
+                     0 0 20px #00a67c,
+                     0 0 35px #00a67c,
+                     0 0 40px #00a67c,
+                     0 0 50px #00a67c,
+                     0 0 75px #00a67c;}
+	66.66% {  text-shadow: 0 0 5px #fff,
+                     0 0 10px #fff,
+                     0 0 15px #fff,
+                     0 0 20px #ff0000,
+                     0 0 35px #ff0000,
+                     0 0 40px #ff0000,
+                     0 0 50px #ff0000,
+                     0 0 75px #ff0000;}
+	100% {  text-shadow: 0 0 5px #fff,
+                     0 0 10px #fff,
+                     0 0 15px #fff,
+                     0 0 20px #00a67c,
+                     0 0 35px #00a67c,
+                     0 0 40px #00a67c,
+                     0 0 50px #00a67c,
+                     0 0 75px #00a67c;}
+   
+}
+
+        </style>
+    </head>
+    <body>
+	<div id='box'>
+	
+        <div id="text" onclick="changeToGame()">
+            Welcome To My Game!
+        </div>
+       </div>
+	   <script>
+	   var i=1;
+	   function aa(){
+	  document.body.style.width=window.innerWidth+"px";
+	   document.body.style.height=window.innerHeight+"px"
+	  window.requestAnimationFrame(aa)
+	   }
+	   window.onload=aa;
+	   function changeToGame(){
+		window.location.href+='snake/index.html';
+	   
+	   }
+	   </script>
+    </body>
+</html>
